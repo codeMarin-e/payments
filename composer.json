@@ -1,0 +1,30 @@
+{
+    "name": "marinar/payments",
+    "description": "Payments modulе",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marin",
+            "email": "marin@dev.nddesign.no"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Marinar\\Payments\\": "src/"
+        }
+    },
+
+    "require": {
+        "marinar/marinar": "*",
+        "marinar/orderable": "*",
+        "marinar/discountable": "*"
+    },
+    "extra": {
+        "marinar": {
+            "module": true,
+            "plugin": false,
+            "addon_to": false
+        }
+    }
+}
