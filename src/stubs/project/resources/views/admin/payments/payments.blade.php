@@ -13,6 +13,8 @@
             </a>
         @endcan
 
+        {{-- @HOOK_AFTER_CREATE --}}
+
         <x-admin.box_messages />
 
         <div class="table-responsive rounded ">
@@ -117,7 +119,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="4">@lang('admin/payments/payments.no_payments')</td>
+                        <td colspan="100%">@lang('admin/payments/payments.no_payments')</td>
                     </tr>
                 @endforelse
                 </tbody>

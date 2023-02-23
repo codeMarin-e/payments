@@ -236,10 +236,15 @@
                                         name='create'>@lang('admin/payments/payment.create')</button>
                             @endcan
                         @endisset
+
+                        {{-- @HOOK_AFTER_BUTTONS --}}
+
                         <a class='btn btn-warning'
                            href="{{ route("{$route_namespace}.payments.index") }}"
                         >@lang('admin/payments/payment.cancel')</a>
                     </div>
+
+                    {{-- @HOOK_ADDON_BUTTONS --}}
                 </form>
             </div>
         </div>
