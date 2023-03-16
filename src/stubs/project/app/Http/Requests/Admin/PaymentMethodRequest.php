@@ -61,7 +61,9 @@ class PaymentMethodRequest extends FormRequest
         $this->errorBag = $inputBag;
         $inputs = $this->all();
         if(!isset($inputs[$inputBag])) {
-            throw new ValidationException(trans('admin/payments/validation.no_inputs') );
+            throw ValidationException::withMessages([
+                $inputBag => trans('admin/payments/validation.no_inputs'),
+            ])->errorBag($inputBag);;
         }
         $inputs[$inputBag]['default2'] = isset($inputs[$inputBag]['default2']);
         $inputs[$inputBag]['test_mode'] = isset($inputs[$inputBag]['test_mode']);
